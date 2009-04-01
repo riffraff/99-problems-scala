@@ -8,4 +8,3 @@ def myLast[T](list :List[T]):T = list match {
 }
 println(myLast(x)==4)
 
-println(myLast2(x)==4)
