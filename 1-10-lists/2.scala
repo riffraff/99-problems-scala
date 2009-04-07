@@ -7,12 +7,18 @@ def butLast[T](list :List[T]):T = list match {
   case x::y::xs => butLast(y::xs)
 }
 
+def butLast1[T](list :List[T]):T = list match {
+  case List(x,y)    => x
+  case x::y::xs => butLast1(y::xs)
+}
+
 def butLast2[T](list :List[T]):T = list(list.size-2)
 def butLast3[T](list :List[T]):T = list.reverse.tail.head
 def butLast4[T](list :List[T]):T = list.init.last
 //def butLast5[T](list :List[T]):T = list(-2) // 1, why?
 
 println(butLast(x)==3)
+println(butLast1(x)==3)
 println(butLast2(x)==3)
 println(butLast3(x)==3)
 println(butLast4(x)==3)

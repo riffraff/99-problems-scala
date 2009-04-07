@@ -10,5 +10,11 @@ def myReverse2[T](list:List[T]):List[T] = list match {
     case x::xs => myReverse2(xs) ::: List(x)
 }
 
+def myReverse3[T](list:List[T]):List[T] = list match {
+    case List(x)  => list
+    case x::xs => myReverse2(xs) ::: List(x)
+}
+
 println(myReverse(x)==y)
 println(myReverse2(x)==y)
+println(myReverse3(x)==y)
