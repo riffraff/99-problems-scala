@@ -1,0 +1,7 @@
+The 99 problems list is a long tradition in software development. 
+It started with prolog, passed through lisp, and appeared in many other contexts.
+For a reasonable list of the problems with solutions in haskell see 
+ http://www.haskell.org/haskellwiki/99_Haskell_exercises
+
+This is just my attempt at it as I learn scala, feel free to fork the project or 
+ask me (riffraff@github) and I'll be happy to add you as a collaborator. 
