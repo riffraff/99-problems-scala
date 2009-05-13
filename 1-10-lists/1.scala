@@ -25,8 +25,6 @@ println(myLast2(x)==4)
 println(myLast3(x)==4)
 println(myLast4(x)==4)
 
-=======
->>>>>>> ebf70fbd2ae78cc9b088c2136f4abf120b317d06:1-10-lists/1.scala
 def myLast[T](list :List[T]):T = list match {
   case List()      => error("this list is empty")
   case x::List() => x
@@ -35,7 +33,3 @@ def myLast[T](list :List[T]):T = list match {
 println(myLast(x)==4)
 
 println(myLast2(x)==4)
-<<<<<<< HEAD:1-10-lists/1.scala
-=======
->>>>>>> c60843e96b1c7f7def77667cb63ea1ac6e75cd85:1-10-lists/1.scala
->>>>>>> ebf70fbd2ae78cc9b088c2136f4abf120b317d06:1-10-lists/1.scala
