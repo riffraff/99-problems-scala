@@ -25,11 +25,3 @@ println(myLast2(x)==4)
 println(myLast3(x)==4)
 println(myLast4(x)==4)
 
-def myLast[T](list :List[T]):T = list match {
-  case List()      => error("this list is empty")
-  case x::List() => x
-  case _::xs     => myLast(xs)
-}
-println(myLast(x)==4)
-
-println(myLast2(x)==4)
