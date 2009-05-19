@@ -12,5 +12,19 @@ def compress2[T](list: List[T]): List[T] =
 
 println(compress(List('a','a','a','a','b','c','c','a','a','d','e','e','e','e')))
 println(compress2(List('a','a','a','a','b','c','c','a','a','d','e','e','e','e')))
+
+
+//this should be builtin in 2.8
+def groupBy[T](list: List[T], eq: (T,T) => Boolean ): List[List[T]] = list match {
+  case Nil   => Nil
+  case x::xs => {
+    val (ys:List[T],zs:List[T]) = xs.span(eq(_,x));
+    (x::ys)::groupBy(zs, eq) 
+    }
+}
+
+def compress3[T](list: List[T]): List[T] =
+  groupBy(list,{(a:T,b:T)=>a==b}).map(_.head)
+println(compress3(List('a','a','a','a','b','c','c','a','a','d','e','e','e','e')))
 //['a','b','c','a','d','e']
 
