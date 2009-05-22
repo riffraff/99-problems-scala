@@ -9,7 +9,7 @@ P12> decodeModified [Multiple 4 'a',Single 'b',Multiple 2 'c',Multiple 2 'a',Sin
 //not really typed
 def decodeModified[T](list: List[Any]): List[T] = 
     list.flatMap({
-        case (n:Int,k:T)=> new Range(0,n,1) map(i=>k)
+        case (n:Int,k:T)=> (1 to n) map(i=>k)
         case x: T => List(x)
     })
 
@@ -23,7 +23,7 @@ case class SingletonItem[T](x:T) extends EncodedItem[T] {
     override def decode(): List[T] = List(x)
 }
 case class PairItem[T](n: Int, x:T) extends EncodedItem[T] {
-    override def decode(): List[T] = new Range(0,n,1).map(i=>x).toList
+    override def decode(): List[T] = (1 to n).map(i=>x).toList
 }
 
 type EncodedList[T] = List[EncodedItem[T]]

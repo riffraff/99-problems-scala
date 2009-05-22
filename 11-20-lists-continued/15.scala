@@ -11,7 +11,7 @@ Example in Haskell:
 
 */
 def repli[T](list :List[T], n: Int): List[T] =
-    list.flatMap(x=>new Range(0,n,1) map {i=>x})
+    list.flatMap(x=>(1 to n) map {i=>x})
 
 println(repli(List(1,2,3),3))
 // vim: set ts=4 sw=4 et:
